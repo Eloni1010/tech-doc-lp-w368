@@ -1,0 +1,132 @@
+<!DOCTYPEhtml>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css"
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Geo:ital@0;1&family=Orbitron:wght@400..900&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <nav id="navbar">
+  <header> Splatoon Turf-War Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#Weapon_types">Weapon Types</a>
+    <a class="nav-link" href="#Gear_Types">Gear Types</a>
+    <a class="nav-link" href="#Ability_Chunks">Ability Chunks</a>
+    <a class="nav-link" href="#Splatfest">Splatfest</a>
+    <a class="nav-link" href="#Shops">Shops</a>
+    <a class="nav-link" href="#Online_vs_Private">Online vs Private</a>
+    <a class="nav-link" href="#Ranked_Mode">Ranked Mode</a>
+    <a class="nav-link" href="#Shell-Out_Machine">Shell-Out Machine</a>
+  </nav>
+  <main id="main-doc">
+    <section class="main-section"id="Introduction"> <header>Introduction</header>
+    <p>When playing Splatoon, the main part of the game that most people play is Turf war. Turf war is a mode where your goal is to paint as much of the available turf, while fighting against the other team for territory. To be able to truly thrive in this mode, you must learn how to properly use the tools available to you.</p>
+    </section>
+    <section class="main-section" id="Weapon_types">
+    <header> Weapon Types</header>
+    <p>In Splatoon there are 11 different weapon types in Splatoon 3.</p>
+    <ul>
+      <li>Shooters</li>
+      <li>Blasters</li>
+      <li>Chargers</li>
+      <li>Rollers</li>
+      <li>Brushes</li>
+      <li>Sloshers</li>
+      <li>Brellas</li>
+      <li>Dualies</li>
+      <li>Stampers</li>
+      <li>Splatlings</li>
+      <li>Stringers</li>
+    </ul>
+    <p>Each weapon type they each have a unique method both in how they ink the ground, but also in how they damage the enemy team, and how much damage each deals. </p>
+    <code>If weapon="Douser_Dualies", Set damage=25.5 points</code>
+    </section>
+    <section class="main-section" id="Gear_Types"> 
+    <header > Gear Types</header>
+    <p>There are three main types of gear that you can wear to boost your abilities.</p>
+    <ul>
+      <li>Head-wear</li>
+      <li>Shirt</li>
+      <li>Shoes</li>
+    </ul>
+    <p>Each piece of gear holds one main ability and three sub abilities. Each ability boosts their given attribute by a given number of AP, or ability points. A main ability gives 10 points, while a sub gives 3 AP. 
+There are some abilities that are specific to gear that cannot be added manually, and can only be found on specific brands of gear. </p>
+    <b>These abilities are:</b>
+    <ul>
+      <li>Opening Gambit</li>
+      <li>Last-Ditch Effort</li>
+      <li>Tenacity</li>
+      <li>Comeback</li>
+      <li>Ninja Squid</li>
+      <li>Haunt</li>
+      <li>Thermal Ink</li>
+      <li>Respawn Punisher</li>
+      <li>Ability Doubler</li>
+      <li>Stealth Jump</li>
+      <li>Object Shredder</li>
+      <li>Drop Roller</li>
+    </ul>
+    <code>If Ability-Slot=Main, 
+   Then Increase AP in Swim-Speed 10,
+    Else, Increase AP in Swim-Speed 3AP</code>
+    </section>
+    <section class="main-section" id="Ability_Chunks"> 
+    <header >Ability Chunks</header>
+    <p>Ability Chunks is the method in which players can add abilities to their gear to aid them in battle. Ability chunks can be obtained through multiple ways, the main two being through Grizco shifts and through the shell-out machine. There are 14 abilities that can be added through chunks</p>
+    <ul>
+      <li>Ink Saver Main</li>
+<li>Ink Saver Sub</li>
+<li>Ink Recovery Up</li>
+<li>Run Speed Up</li>
+<li>Swim Speed Up</li>
+<li>Special Charge Up</li>
+<li>Special Saver</li>
+<li>Special Power Up</li>
+<li>Quick Respawn</li>
+<li>Quick Super Jump</li>
+<li>Sub Power Up</li>
+<li>Ink Resistance Up</li>
+<li>Bomb Defence Up</li>
+<li>Cold Blooded</li>
+    </ul> 
+    </section>
+    <section class="main-section" id="Splatfest">
+    <header >Splatfest</header>
+    <p>Splatfest changes both how much experience you gain, but also how the turf war games work. During splatfests, you pick a team based on that fest’s specific theme, as an example of a past theme, “Which is most important to you? Past vs Present vs Future” in which team Past won. During a splatfest, you’ll battle for that team throughout the fest, and gain more experience as you do, along with have a chance for X10 and X100 battles, which can net you even more points.</p>
+    <code>If Splatfest=active, Increase Exp Gain, +60 win, +20 loss
+  Else, Exp gain +600 win, +300 loss</code>
+  </section>
+    <section class="main-section" id="Shops">
+  <header >Shops</header>
+    <p>Shops are the main places to get new gear and weapons.</p>
+    <b>There are 5 shops in Splatoon 3, </b>
+    <ul>
+      <li>Ammo Knights (Weaponry)</li>
+      <li>Naut Couture (Headgear)</li>
+      <li>Man-O’-Wardrobe (Clothing)</li>
+      <li>Crush Station (Shoes)</li>
+      <li>Hotlantis (General)</li>
+    </ul>
+    <p>Hotlantis does not affect turf war stats, but items used to decorate your Turf Lobby Locker can be purchased here.</p>
+    </section>
+    <section class="main-section"id="Online_vs_Private">
+    <header >Online vs Private</header>
+    <p>Online battles are the only way to earn experience points during turf war. Private battles do not give any experience points.</p>
+    <code>If battle=Private, disable exp-gain,
+    else, exp-gain active.</code>
+    </section>
+    <section class="main-section" id="Ranked_Mode">
+    <header >Ranked Mode</header>
+    <p>Ranked mode is a more difficult mode to play, as with each win your rank goes higher and each loss your rank lowers. With each match, the amount of experience is also increased depending on your rank. at the end of each season, the top ranked players are announced. </p>
+    <code>If result=win, add win-bonus to exp, increase rank.else, lower rank</code>
+    </section>
+    <section class="main-section" id="Shell-Out_Machine">
+    <header > Shell-Out Machine</header>
+    <p>The shell-out machine is a gatchapon machine that gives randomized rewards for each play. Rewards can range from decorative items for the player’s locker and their profile, but also Ability Chunks and Food tickets that can be used to further boost experience and coins earned from playing Turf War.</p>
+    </section> 
+    <br>
+    <footer>All information gathered from Splatoon 3 Game and the <a href= "https://splatoonwiki.org/wiki/Main_Page">Splatoon Wiki</a></footer>
+  </main>
+</body>
+  </html>
